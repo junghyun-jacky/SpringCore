@@ -16,7 +16,8 @@ public class OrderServiceImpl implements OrderService{
     // 방침 변경으로 인한 정률법 적용 -> OrderServiceImpl의 코드를 변경했으므로 OCP를 위반하는 문제 발생
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy();
     // DIP를 위반하지 않도록 인터페이스에만 의존하도록 의존관계를 변경
-    private final DiscountPolicy discountPolicy;
+
+    // private final DiscountPolicy discountPolicy;
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
